@@ -1,0 +1,9 @@
+Congratulations on your claim approval for {{ args.rfw.title }} - {{ args.milestone.title }}!
+
+{% if args.message %}
+A note from the admin team was attached to your approval:
+
+> {{ args.message }}
+{% endif %}
+
+View the claim: {{ args.rfw_url }}

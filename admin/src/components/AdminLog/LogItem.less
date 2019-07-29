@@ -1,0 +1,44 @@
+.LogItem {
+  &.ant-list-item {
+    padding: 0;
+  }
+
+  &-user,
+  &-event,
+  &-message,
+  &-ip {
+    padding: 0.5rem;
+    border-right: 1px solid rgba(#000, 0.1);
+  }
+
+  &-user {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 15rem;
+
+    .ant-list-item-meta-description {
+      line-height: 1;
+    }
+  }
+
+  &-event {
+    flex-shrink: 0;
+    width: 9rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  &-message {
+    font-size: 0.9rem;
+    flex: 1;
+  }
+
+  &-ip {
+    flex-shrink: 0;
+    width: 7rem;
+    opacity: 0.8;
+    font-size: 0.7rem;
+    text-align: center;
+    border: none;
+  }
+}

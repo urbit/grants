@@ -1,0 +1,22 @@
+@import 'variables.less';
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+
+  @media @tablet-query {
+    font-size: 14px;
+  }
+  @media @mobile-query {
+    font-size: 12px;
+  }
+  @media @tiny-query {
+    font-size: 11px;
+  }
+}

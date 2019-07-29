@@ -1,0 +1,55 @@
+@height: 3rem;
+
+.UserRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: @height;
+  margin-bottom: 1rem;
+  color: inherit;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &-avatar {
+    display: block;
+    height: @height;
+    width: @height;
+    margin-right: 0.75rem;
+
+    &-img {
+      width: 100%;
+    }
+  }
+
+  &-info {
+    flex: 1;
+    min-width: 0;
+
+    &-main {
+      font-size: 1.1rem;
+      margin-bottom: 0.1rem;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-secondary {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      min-width: 0;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &-extra {
+    text-align: right;
+    margin-left: 1rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,145 @@
+@import '~styles/variables.less';
+
+.ProposalMilestones {
+  width: 100%;
+
+  &-action {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid @border-color;
+
+    &-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  &-milestone {
+    display: flex;
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-stage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      border: 2px solid @primary-color;
+      border-radius: 100%;
+
+      .anticon {
+        font-size: 1rem;
+      }
+
+      &.is-filled {
+        border: none;
+        background: @primary-color;
+        color: @inverse-color;
+      }
+    }
+
+    &-alert {
+      width: fit-content;
+      margin: 0 0 1rem 0;
+    }
+
+    &-title {
+      white-space: nowrap;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &-status {
+      font-family: @code-family;
+      white-space: nowrap;
+      line-height: 1;
+      @media @mobile-query {
+        margin-bottom: 0.6rem;
+      }
+
+      & > div {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        display: inline-block;
+        @media @mobile-query {
+          margin-bottom: 0;
+          display: block;
+        }
+      }
+
+      & > div + div {
+        padding-left: 0.75rem;
+        margin-left: 0.75rem;
+        border-left: 1px solid @border-color;
+        @media @mobile-query {
+          padding-left: 0;
+          margin-left: 0;
+          border-left: none;
+        }
+      }
+    }
+
+    &-body {
+      display: flex;
+
+      @media @thin-query {
+        flex-direction: column;
+        margin-left: 0.4rem;
+      }
+    }
+
+    &-description {
+      font-size: 1.1rem;
+    }
+
+    &-description,
+    &-action {
+      flex: 1;
+    }
+
+    &-action {
+      q {
+        display: block;
+        margin-bottom: 0.5rem;
+        background: rgba(0, 0, 0, 0.06);
+        padding: 0.5rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      &-controls {
+        display: flex;
+
+        & > * {
+          flex-grow: 1;
+        }
+        & > * + * {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    &-divider {
+      width: 1px;
+      background: rgba(0, 0, 0, 0.05);
+      margin: 0 2rem;
+
+      @media @thin-query {
+        height: 1px;
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+  }
+}

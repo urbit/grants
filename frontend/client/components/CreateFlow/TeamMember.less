@@ -1,0 +1,117 @@
+@import '~styles/variables.less';
+
+.TeamMember {
+  position: relative;
+  display: flex;
+  margin: 0 auto 1rem;
+
+  &.is-editing {
+    align-items: flex-start;
+  }
+
+  &-avatar {
+    position: relative;
+    height: 6rem;
+    width: 6rem;
+    margin-right: 1.25rem;
+
+    &-img {
+      height: 100%;
+      width: 100%;
+    }
+
+    &-change {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateY(1rem) translateX(-50%);
+    }
+  }
+
+  &-info {
+    flex: 1;
+
+    // Read only view
+    &-name {
+      font-size: 1.6rem;
+    }
+
+    &-title {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &-social {
+      display: flex;
+
+      &-icon {
+        position: relative;
+        height: 1.3rem;
+        font-size: 1.3rem;
+        margin-right: 1rem;
+        opacity: 0.2;
+
+        &.is-active {
+          opacity: 1;
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+
+        &-check {
+          position: absolute;
+          font-size: 0.8rem;
+          bottom: 0;
+          right: 0;
+          transform: translate(50%, 50%);
+          color: @success-color;
+          background: #FFF;
+          border: 1px solid #FFF;
+          border-radius: 100%;
+        }
+      }
+    }
+
+    &-edit {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1rem;
+      opacity: 0.5;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &-remove {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      font-size: 1rem;
+      opacity: 0.3;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    // Edit form
+    .ant-form-item {
+      margin-bottom: 0.25rem;
+    }
+
+    .ant-btn {
+      margin-right: 0.5rem;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  
+
+  
+}

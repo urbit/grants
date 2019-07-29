@@ -1,0 +1,40 @@
+.AdminLog {
+  min-width: 640px;
+
+  .ant-list-header {
+    padding: 0;
+  }
+
+  &-header {
+    display: flex;
+    font-weight: bold;
+    font-size: 0.8rem;
+    background: rgba(#000, 0.03);
+
+    &-user,
+    &-event,
+    &-message,
+    &-ip {
+      padding: 0.5rem;
+      border-right: 1px solid rgba(#000, 0.1);
+    }
+
+    &-user {
+      width: 15rem;
+    }
+
+    &-event {
+      width: 9rem;
+    }
+
+    &-message {
+      flex: 1;
+    }
+
+    &-ip {
+      width: 7rem;
+      text-align: center;
+      border-right: none;
+    }
+  }
+}

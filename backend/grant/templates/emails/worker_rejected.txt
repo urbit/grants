@@ -1,0 +1,10 @@
+The request to work on {{ args.rfw.title }} has been reviewed. We are sorry to 
+inform you that we could not approve the request at this time.
+
+{% if args.message %}
+A note from the admin team was attached to this review:
+
+> {{ args.message }}
+{% endif %}
+
+View request: {{ args.rfw_url }}

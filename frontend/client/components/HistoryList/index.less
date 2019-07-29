@@ -1,0 +1,50 @@
+@import '~styles/variables.less';
+
+.HistoryList {
+  &-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &-item {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    &.ant-list-item {
+      border-bottom: none;
+    }
+
+    &-image {
+      margin-right: 1rem;
+
+      img,
+      svg {
+        display: block;
+        height: 6rem;
+        width: 6rem;
+      }
+    }
+
+    &-info {
+      &-title {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+      }
+
+      &-date {
+        font-size: 0.8rem;
+        opacity: 0.7;
+        margin-bottom: 1rem;
+        font-family: @code-family;
+      }
+
+      &-content {
+        font-size: 1rem;
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

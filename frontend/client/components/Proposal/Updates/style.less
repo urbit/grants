@@ -1,0 +1,48 @@
+.ProposalUpdates {
+  &-update {
+    padding: 1rem;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &-title {
+      font-size: 1.8em;
+      margin-bottom: 0.2rem;
+    }
+
+    &-date {
+      font-size: 0.9rem;
+      opacity: 0.5;
+      margin-top: -0.2rem;
+      margin-bottom: 1rem;
+    }
+
+    &-body {
+      font-size: 1rem;
+    }
+
+    &-controls {
+      display: flex;
+      align-items: center;
+
+      &-button {
+        font-size: 0.7rem;
+
+        &:after {
+          content: '';
+          display: inline-block;
+          margin: 0 0.5rem;
+          vertical-align: middle;
+          width: 2px;
+          height: 2px;
+          border-radius: 100%;
+          background: #AAA;
+        }
+
+        &:last-child:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import '~styles/variables.less';
+
+.ProfileProposal {
+  display: flex;
+  margin-bottom: 3rem;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: none;
+  }
+
+  @media @mobile-query {
+    flex-direction: column;
+    padding-bottom: 0.6rem;
+  }
+
+  &-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: inherit;
+    display: block;
+    margin-bottom: 0.5rem;
+
+    &, &:hover, &:focus, &:active {
+      text-decoration: underline;
+    }
+  }
+
+  &-block {
+    flex: 1 0 0%;
+
+    &-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    &:last-child {
+      margin-left: 1.2rem;
+      flex: 0 0 0%;
+      min-width: 15rem;
+
+      @media @mobile-query {
+        margin-left: 0;
+        margin-top: 0.6rem;
+      }
+    }
+
+    &-team {
+      @media @mobile-query {
+        display: flex;
+        flex-flow: wrap;
+      }
+
+      & .UserRow {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &-details {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+    font-family: @code-family;
+
+    &-detail {
+      display: flex;
+      align-items: center;
+
+      &:after {
+        display: inline-block;
+        content: '|';
+        font-size: 0.6rem;
+        margin: 0 0.6rem;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+}

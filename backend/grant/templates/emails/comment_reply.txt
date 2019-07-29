@@ -1,0 +1,4 @@
+You just received a reply from {{ args.author.display_name }} on {{ args.proposal.title }}:
+
+Go here to see their response: {{ args.comment_url }}
+Go here to see their profile: {{ args.author_url }}

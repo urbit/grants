@@ -1,0 +1,53 @@
+.TagSelect {
+  &-menu {
+    small {
+      display: inline-block;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+    }
+  }
+
+  &-create {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+
+    & > * {
+      margin: 0.6rem;
+      text-align: center;
+    }
+
+    &-preview {
+      margin-top: 2rem;
+    }
+
+    &-inputs,
+    &-color {
+      display: flex;
+
+      &-text {
+        width: 8rem;
+        margin-right: 1rem;
+      }
+    }
+
+    .hue-picker {
+      display: inline-block;
+    }
+  }
+
+  &-manageBtn {
+    color: #aaaaaa;
+    font-size: 0.8rem;
+    display: inline-block;
+    text-decoration: underline;
+  }
+
+  &-manage {
+    .ant-tag {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

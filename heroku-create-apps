@@ -1,0 +1,87 @@
+#!/bin/bash
+
+BUILDPACK="https://github.com/AMStrix/heroku-buildpack-mono-apps"
+
+BASE_NAME=${1:-}
+
+if [[ -z "${BASE_NAME}" ]]; then
+    echo "problem: must provide a base name for the app as first argument"
+    exit 1
+fi
+
+heroku_user=$(heroku auth:whoami)
+
+if ! [ $? ]; then
+    echo "problem: must have heroku cli and be authorized"
+    exit 1
+fi
+
+errcheck () {
+  last=$?
+  if [ $last != 0 ]; then
+    printf "$1\n"
+    exit $last
+  fi
+}
+
+create () {
+  local app=$BASE_NAME-$1
+  local status="[$app] 1. create the heroku app... "
+  printf "$status"
+  out=$(heroku create -a $app 2>&1)
+  errcheck "\n[$app] ✘ Error, could not create $app, the name might be taken already on heroku\n"
+  printf " ✔\n"
+
+  local status="[$app] 2. rename git remote... "
+  printf "$status"
+  out=$(git remote rename heroku $app 2>&1)
+  errcheck "\n[$app] ✘ Error, could not rename the heroku remote to $app\n"
+  printf " ✔\n"
+
+  local status="[$app] 3. set the buildpack... "
+  printf "$status"
+  out=$(heroku buildpacks:add -a $app $BUILDPACK 2>&1)
+  errcheck "\n[$app] ✘ Error, could not set buildpack for $app to $BUILDPACK\n"
+  printf " ✔\n"
+
+  local status="[$app] 4. set the APP_DIR_HEROKU environment variable... "
+  printf "$status"
+  out=$(heroku config:set -a $app APP_DIR_HEROKU=$1 2>&1)
+  errcheck "\n[$app] ✘ Error, could not set APP_DIR_HEROKU for app $app\n"
+  printf " ✔\n"
+
+  printf "[$app] created SUCCESS!\n\n"
+}
+
+
+echo ""
+echo "Attempting to create apps for heroku user $heroku_user"
+echo "  backend:            $BASE_NAME-backend"
+echo "  frontend:           $BASE_NAME-frontend"
+echo "  admin:              $BASE_NAME-admin"
+echo "  eip712:             $BASE_NAME-eip712"
+echo ""
+
+read -p "Is this correct? (y/n): " -n 1 -r
+echo 
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+
+  create "backend"
+  create "frontend"
+  create "admin"
+  create "eip712"
+
+  echo "All apps have been created, deploy with the following commands:"
+  echo "  git push $BASE_NAME-backend HEAD:master"
+  echo "  git push $BASE_NAME-frontend HEAD:master"
+  echo "  git push $BASE_NAME-admin HEAD:master"
+  echo "  git push $BASE_NAME-eip712 HEAD:master"
+  echo
+
+else 
+
+  echo "Canceled create app $BASE_NAME, goodbye now."
+  echo
+
+fi

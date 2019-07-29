@@ -1,0 +1,32 @@
+@max-width: 440px;
+
+.SignIn {
+  &-container {
+    width: 100%;
+    max-width: @max-width;
+
+    & button,
+    & input {
+      margin-bottom: 0.5rem;
+    }
+
+    &-bottom {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-back {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+  }
+
+  &-error {
+    max-width: @max-width;
+    margin-top: 1rem;
+  }
+}

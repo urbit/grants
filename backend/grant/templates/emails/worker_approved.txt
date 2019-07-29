@@ -1,0 +1,9 @@
+Congratulations, you have been approved to work on {{ args.rfw.title }}!
+
+{% if args.message %}
+A note from the admin team was attached to your approval:
+
+> {{ args.message }}
+{% endif %}
+
+View request: {{ args.rfw_url }}

@@ -1,0 +1,27 @@
+{
+  "name": "grant",
+  "version": "0.0.1",
+  "dependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.11.1",
+    "azimuth-js": "0.15.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "eth-sig-util": "2.2.0",
+    "express": "^4.16.4",
+    "typescript": "^3.1.1",
+    "urbit-ob": "4.0.1",
+    "web3": "1.0.0-beta.55"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "scripts": {
+    "heroku-postbuild": "yarn tsc",
+    "tsc": "tsc",
+    "start": "node build/server.js"
+  },
+  "resolutions": {
+    "azimuth-js/azimuth-solidity/truffle/mocha/diff": "3.5.0"
+  }
+}

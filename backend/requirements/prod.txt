@@ -1,0 +1,92 @@
+# Everything needed in production
+
+# Flask
+Flask==1.0.2
+MarkupSafe==1.0
+Werkzeug==0.14.1
+Jinja2==2.10.1
+itsdangerous==0.24
+click>=5.0
+
+# Database
+Flask-SQLAlchemy==2.3.2
+psycopg2==2.7.5
+SQLAlchemy==1.3.0
+
+# Migrations
+Flask-Migrate==2.2.1
+
+# Forms
+Flask-WTF==0.14.2
+WTForms==2.2.1
+
+# Serialization
+marshmallow==3.0.0b13
+flask-marshmallow==0.9.0
+marshmallow-sqlalchemy
+
+# CORS
+Flask-Cors==3.0.6
+
+# Deployment
+gunicorn>=19.1.1
+
+# Auth
+Flask-Bcrypt==0.7.1
+
+# Caching
+Flask-Caching>=1.0.0
+
+# Environment variable parsing
+environs==4.0.0
+
+# HTTP
+requests
+beautifulsoup4==4.6.1
+
+# task queue
+redis==2.10.6
+
+# md
+markdownify
+
+# email
+sendgrid==5.6.0
+
+#sentry
+sentry-sdk[flask]==0.7.6
+
+#boto3 (AWS sdk)
+boto3==1.9.52
+
+# force SSL
+Flask-SSLify==0.1.5
+
+# sessions
+Flask-Security==3.0.0
+
+# oauth
+requests-oauthlib==1.0.0
+
+# request parsing
+webargs==5.1.3
+
+# 2fa - totp
+pyotp==2.2.7
+
+# JSON formatting
+animal_case==0.4.1
+
+# Rate limiting
+Flask-Limiter==1.0.1
+
+# validate email
+validate_email==1.3
+
+# validate URLS
+validators==0.12.4
+
+# Azimuth validation
+web3==5.0.0-beta.2
+eth-abi==2.0.0-beta.9
+eth-account==0.4.0

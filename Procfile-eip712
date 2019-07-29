@@ -1,0 +1,1 @@
+web: cd eip712 && yarn start

@@ -1,0 +1,39 @@
+<p style="margin: 0;">
+  Hey {{ args.display_name }}, you just changed your email. In order to confirm
+  this change, just click the button below.
+</p>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td bgcolor="#ffffff"  style="padding: 40px 0 40px;">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center"  bgcolor="{{ UI.PRIMARY }}">
+            <a
+              href="{{ args.confirm_url }}"
+              target="_blank"
+              style="font-size: 20px; font-family: {{ UI.TEXT_FONT }}; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 20px 50px; border: 1px solid {{ UI.PRIMARY }}; display: inline-block;"
+            >
+              Confirm Email
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p style="margin: 0 0 5px; font-size: 12px;">
+  If that doesn't work, copy and paste the following link in your browser
+</p>
+
+<p style="margin: 0 0 5px; font-size: 12px;">
+  <a href="{{ args.confirm_url }}" target="_blank" style="color: {{ UI.PRIMARY }};">{{
+    args.confirm_url
+  }}</a>
+</p>
+
+<p style="margin: 0; font-size: 12px;">
+  Don’t know why you got this email? Don’t worry, you can safely ignore it. We
+  won’t send you anymore.
+</p>

@@ -1,0 +1,37 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "outDir": "dist",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "lib": ["dom", "es2017"],
+    "paths": {
+      "api/*": ["./client/api/*"],
+      "components/*": ["./client/components/*"],
+      "lib/*": ["./client/lib/*"],
+      "modules/*": ["./client/modules/*"],
+      "pages/*": ["./client/pages/*"],
+      "static/*": ["./client/static/*"],
+      "store/*": ["./client/store/*"],
+      "styles/*": ["./client/styles/*"],
+      "typings/*": ["./client/typings/*"],
+      "types/*": ["./types/*"],
+      "utils/*": ["./client/utils/*"]
+    }
+  },
+  "include": ["./client/**/*", "./server/**/*", "./stories/**/*", "./types/**/*"],
+  "exclude": ["./client/static"]
+}

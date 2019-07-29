@@ -1,0 +1,30 @@
+@import '~styles/variables.less';
+
+.AzimuthPoints {
+  .ant-alert {
+    margin-bottom: 1rem;
+  }
+
+  &-point {
+    outline: none;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.is-active {
+      font-weight: bold;
+      opacity: 1;
+    }
+
+    &-sigil svg {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    &-code {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import 'variables.less';
+
+// Forms
+.ant-form-item-label {
+  line-height: 1rem;
+}
+.ant-form-label label,
+.ant-form-item-label label {
+  font-size: 1rem;
+}
+.ant-form-item-required:before {
+  color: @primary-color;
+}
+
+// Fix ellipsis breaking on character. I think it's a chinese simplified thing.
+div.antd-pro-ellipsis-ellipsis {
+  word-break: break-word;
+}
+
+// List items with long content can push the actions aside
+.ant-list-item {
+  overflow: hidden;
+
+  .ant-list-item-content,
+  .ant-list-item-meta,
+  .ant-list-item-meta-content {
+    min-width: 0;
+  }
+
+  .ant-list-item-meta-title,
+  .ant-list-item-meta-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Alert font sizes
+.ant-alert {
+  font-size: 1rem;
+
+  &.ant-alert-with-description .ant-alert-message {
+    font-size: 1.2rem;
+  }
+
+  .ant-alert-description {
+    font-size: 1rem;
+  }
+}
+
+// Give modals nice juicy titles
+.ant-modal-confirm-body .ant-modal-confirm-title,
+.ant-modal-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+}

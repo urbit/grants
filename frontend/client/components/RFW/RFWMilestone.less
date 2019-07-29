@@ -1,0 +1,94 @@
+@import '~styles/variables.less';
+
+.RFWMilestone {
+  display: flex;
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid @primary-color;
+    border-radius: 100%;
+
+    .anticon {
+      font-size: 1rem;
+    }
+
+    &.is-filled {
+      border: none;
+      background: @primary-color;
+      color: @inverse-color;
+    }
+  }
+
+  &-title {
+    white-space: nowrap;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &-status {
+    font-family: @code-family;
+    white-space: nowrap;
+    line-height: 1;
+    @media @mobile-query {
+      margin-bottom: 0.6rem;
+    }
+
+    & > div {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      display: inline-block;
+      @media @mobile-query {
+        margin-bottom: 0;
+        display: block;
+      }
+    }
+
+    & > div + div {
+      padding-left: 0.75rem;
+      margin-left: 0.75rem;
+      border-left: 1px solid @border-color;
+      @media @mobile-query {
+        padding-left: 0;
+        margin-left: 0;
+        border-left: none;
+      }
+    }
+  }
+
+  &-content {
+    font-size: 1.1rem;
+  }
+}
+
+.RFWMilestoneClaim {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  font-family: @code-family;
+
+  &-user {
+    font-weight: 600;
+    text-decoration: underline;
+    margin-right: 0.4rem;
+
+    &-avatar {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import '~styles/variables.less';
+
+.ProposalDetailBlock {
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+
+    &-label {
+      margin-right: 0.4rem;
+
+      &:after {
+        content: ':';
+      }
+    }
+
+    &-value {
+      flex-basis: 0;
+      flex-grow: 1;
+      font-weight: 600;
+      overflow: hidden;
+
+      &-matching {
+        font-size: 0.9rem;
+        color: @info-color;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-popover {
+    &-overlay {
+      max-width: 400px;
+    }
+  }
+
+  &-status {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.15rem;
+
+    .anticon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2rem;
+      width: 2rem;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      background: @primary-color;
+      color: @inverse-color;
+    }
+  }
+}

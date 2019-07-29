@@ -1,0 +1,5 @@
+This notice is to inform you that your proposal "{{ args.proposal.title }}"
+has been canceled. 
+  
+If you have any further questions, please contact support for more information:
+{{ args.support_url }}

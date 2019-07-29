@@ -1,0 +1,241 @@
+<!-- THIS EMAIL WAS BUILT AND TESTED WITH LITMUS http://litmus.com -->
+<!-- IT WAS RELEASED UNDER THE MIT LICENSE https://opensource.org/licenses/MIT -->
+<!-- QUESTIONS? TWEET US @LITMUSAPP -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <style type="text/css">
+      /* CLIENT-SPECIFIC STYLES */
+      body {
+        color: #000000;
+      }
+      
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      a {
+        color: {{ UI.PRIMARY }};
+        text-decoration: underline;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* RESET STYLES */
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+
+      table {
+        border-collapse: collapse !important;
+      }
+
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: underline !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* MOBILE STYLES */
+      @media screen and (max-width: 600px) {
+        h1 {
+          font-size: 32px !important;
+          line-height: 32px !important;
+        }
+      }
+
+      /* ANDROID CENTER FIX */
+      div[style*="margin: 16px 0;"] {
+        margin: 0 !important;
+      }
+    </style>
+  </head>
+  <body
+    style="margin: 0 !important; padding: 0 !important;"
+  >
+    <!-- HIDDEN PREHEADER TEXT -->
+    <div
+      style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: {{ UI.TEXT_FONT }}; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"
+    >
+      {{ args.preview }}
+    </div>
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <!-- TITLE -->
+      <tr>
+        <td
+          align="center"
+          style="padding: 0px 10px 0px 10px;"
+        >
+          <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                    <td align="center" valign="top" width="600">
+            <![endif]-->
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="max-width: 600px;"
+            width="100%"
+          >
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                style="padding: 40px 0 25px; color: #000000; font-family: {{ UI.TEXT_FONT }}; font-size: 48px; font-weight: 400; line-height: 48px;"
+                valign="top"
+              >
+                <h1 style="font-size: 36px; font-weight: 600; margin: 0;">
+                  {{ args.title }}
+                </h1>
+              </td>
+            </tr>
+          </table>
+
+          <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+      </tr>
+      <!-- BODY -->
+      <tr>
+        <td align="center">
+          <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                    <td align="center" valign="top" width="600">
+            <![endif]-->
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="max-width: 600px;"
+            width="100%"
+          >
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                style="color: #000000; font-family: {{ UI.TEXT_FONT }}; font-size: 18px; font-weight: 400; line-height: 25px;"
+              >
+                {{ args.body }}
+              </td>
+            </tr>
+          </table>
+
+          <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+      </tr>
+      <!-- FOOTER -->
+      <tr>
+        <td
+          align="center"
+          style="padding: 0px 10px 0px 10px;"
+        >
+          <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                    <td align="center" valign="top" width="600">
+            <![endif]-->
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="max-width: 600px;"
+            width="100%"
+          >
+            <!-- NAVIGATION -->
+            <tr>
+              <td
+                style="padding: 80px 0 10px; color: #000; font-family: {{ UI.CODE_FONT }}; font-size: 12px; font-weight: 400; line-height: 18px;"
+              >
+                <p style="margin: 0;">
+                  <a
+                    href="{{ args.home_url }}"
+                    style="color: #000000; font-weight: 700;"
+                    target="_blank"
+                  >
+                    {{ UI.NAME }}</a
+                  >
+                  -
+                  <a
+                    href="{{ args.account_url }}"
+                    style="color: #000000; font-weight: 700;"
+                    target="_blank"
+                    >Your Account</a
+                  >
+                  -
+                  <a
+                    href="{{ args.email_settings_url }}"
+                    style="color: #000000; font-weight: 700;"
+                    target="_blank"
+                    >Email Settings</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- UNSUBSCRIBE -->
+            <tr>
+              <td
+                style="padding: 0 0 30px; color: #000000; font-family: {{ UI.CODE_FONT }}; font-size: 12px; font-weight: 400; line-height: 18px;"
+              >
+                <p style="margin: 0;">
+                  Don’t want any more emails?
+                  <a
+                    href="{{ args.unsubscribe_url }}"
+                    style="color: #221F1F; font-weight: 700;"
+                    target="_blank"
+                  >
+                    Click here to unsubscribe</a
+                  >.
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

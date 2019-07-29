@@ -1,0 +1,124 @@
+@import '~styles/variables.less';
+
+.CreateReview {
+  &-section {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+}
+
+.ReviewField {
+  display: flex;
+  flex-direction: row;
+
+  &-label {
+    width: 220px;
+    padding: 0 2rem 1rem 0;
+    font-size: 1.3rem;
+    text-align: right;
+
+    &-error {
+      color: @error-color;
+      font-size: 0.8rem;
+    }
+  }
+
+  &-content {
+    flex: 1;
+    font-size: 1.3rem;
+    padding: 0 0 1rem 1.5rem;
+    word-break: break-word;
+
+    code {
+      font-size: 1rem;
+    }
+
+    &-empty {
+      font-size: 1.3rem;
+      font-family: @code-family;
+    }
+
+    &-edit {
+      margin-bottom: 5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: 1px solid @primary-color;
+      color: @primary-color;
+      cursor: pointer;
+
+      &:hover,
+      &:focus,
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.ReviewMilestone {
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  transform: translateY(-0.3rem);
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+  
+  &-title {
+    font-size: 1.4rem;
+    margin: 0 0 0.3rem;
+
+    em {
+      font-family: @code-family;
+      color: @error-color;
+      font-style: normal;
+    }
+  }
+
+  &-info {
+    font-size: 0.75rem;
+    margin-top: -0.3rem;
+    margin-bottom: 0.5rem;
+    font-family: @code-family;
+  }
+
+  &-description {
+    font-size: 1rem;
+
+    em {
+      font-family: @code-family;
+      color: @error-color;
+      font-style: normal;
+    }
+  }
+}
+
+.ReviewTeam {
+  &-member {
+    display: flex;
+    margin-bottom: 0.75rem;
+
+    &-avatar {
+      height: 3.6rem;
+      width: 3.6rem;
+      margin-right: 1rem;
+    }
+
+    &-info {
+      &-name {
+        font-size: 1.3rem;
+        margin-bottom: 0.2rem;
+      }
+
+      &-title {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &-invites {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-family: @code-family;
+  }
+}

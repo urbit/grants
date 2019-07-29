@@ -1,0 +1,3 @@
+A worker has made a milestone claim on {{ args.rfw.title }} - {{ args.milestone.title }}. As an admin you can help out by reviewing the claim.
+
+Review the claim here: {{ args.rfw_url }}

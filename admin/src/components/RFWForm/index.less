@@ -1,0 +1,74 @@
+.RFWForm {
+  max-width: 880px;
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  &-tags {
+    margin-bottom: 0.5rem;
+  }
+
+  &-content {
+    &-preview {
+      font-size: 1rem;
+      overflow: auto;
+
+      // Taken from textarea to match it
+      padding: 4px 11px;
+      min-height: 136px;
+      max-height: 325px;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+    }
+  }
+
+  @top-padding: 2rem;
+  @side-padding: 4rem;
+  @num-size: 2.2rem;
+
+  &-milestone {
+    border-top: 1px solid #ccc;
+    padding: @top-padding @side-padding;
+    margin-bottom: -1rem;
+    position: relative;
+    transition: height 500ms ease-in;
+    overflow: hidden;
+
+    &-number {
+      position: absolute;
+      left: 0;
+      top: @top-padding;
+      font-size: @num-size - (@num-size * 0.3);
+      text-align: center;
+      width: @num-size;
+      height: @num-size;
+      border: 1px solid #666666;
+      border-radius: @num-size / 2;
+    }
+
+    &-delete {
+      position: absolute;
+      right: 0;
+      top: @top-padding;
+    }
+
+    &.is-deleting {
+      background: #fffbe6;
+    }
+  }
+
+  &-milestoneBottom {
+    margin-top: 0;
+    border-top: 1px solid #ccc;
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+
+  &-buttons {
+    margin-top: 2rem;
+    .ant-btn {
+      margin-right: 0.5rem;
+    }
+  }
+}

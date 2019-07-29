@@ -1,0 +1,60 @@
+.RFPDetail {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  &-actions {
+    .ant-btn {
+      margin-top: 0.5rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &-deet {
+    position: relative;
+    margin-bottom: 1rem;
+
+    & > span {
+      font-size: 0.7rem;
+      position: absolute;
+      opacity: 0.8;
+      top: 1rem;
+    }
+  }
+
+  &-proposal {
+    display: block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(#000, 0.08);
+    color: rgba(0, 0, 0, 0.65);
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border: none;
+    }
+
+    &:hover {
+      color: #1890ff;
+    }
+  }
+
+  & .ant-card,
+  .ant-alert,
+  .ant-collapse {
+    margin-bottom: 16px;
+
+    button + button {
+      margin-left: 0.5rem;
+    }
+
+    em {
+      opacity: 0.6;
+    }
+  }
+}
+  

@@ -1,0 +1,3 @@
+Hooray! {{args.amount}} STARS have been paid out for "{{ args.proposal.title }} - {{args.milestone.title }}"!
+
+View the milestone: {{ args.proposal_milestones_url }}

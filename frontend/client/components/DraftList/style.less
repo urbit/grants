@@ -1,0 +1,62 @@
+@import '~styles/variables.less';
+
+.DraftList {
+  &-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  &-drafts {
+    margin-bottom: 2rem;
+  }
+
+  &-create {
+    display: block;
+    max-width: 280px;
+  }
+
+  .Placeholder {
+    margin-bottom: 2rem;
+  }
+
+  .ant-divider {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .ant-alert {
+    margin-bottom: 1rem;
+  }
+}
+
+.DraftItem {
+  display: flex;
+  margin-bottom: 2rem;
+
+  &-delete {
+    width: 2rem;
+    height: 2rem;
+    background: @primary-color;
+    color: @inverse-color;
+    margin-top: 0.25rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  &-info {
+    &-title {
+      font-size: 1.3rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import '~styles/variables.less';
+
+.ProfileUser {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  &-avatar {
+    position: relative;
+    flex: 0 0 auto;
+    height: 10.3rem;
+    width: 10.3rem;
+    margin-right: 1.25rem;
+
+    &-img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-info {
+    // no overflow of flexbox
+    min-width: 0;
+
+    &-name {
+      display: flex;
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &-social {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      & a {
+        display: block;
+        color: inherit;
+      }
+
+      &-icon {
+        height: 2rem;
+        font-size: 1.3rem;
+        margin-right: 0.5rem;
+        transition: transform 100ms;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

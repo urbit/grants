@@ -1,0 +1,114 @@
+@import '~styles/variables.less';
+
+.Home {
+  min-height: 100vh;
+  padding: 0 @template-space-sides;
+
+  &-hero {
+    position: relative;
+    overflow: hidden;
+    
+    &-inner {
+      max-width: @max-content-width;
+      margin: 0 auto;
+      padding: 2rem 0 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &-text {
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      max-width: @max-content-width * 0.75;
+
+      @media @tablet-query {
+        font-size: 1.1rem;
+      }
+
+      @media @mobile-query {
+        font-size: 1.2rem;
+      }
+    }
+
+    &-sections {
+      max-width: @max-content-width * 0.66;
+
+      &-section {
+        margin-bottom: 2rem;
+
+        h3 {
+          font-size: 1.6rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+
+          @media @tablet-query {
+            font-size: 1.8rem;
+          }
+    
+          @media @mobile-query {
+            font-size: 2rem;
+          }
+        }
+
+        p {
+          font-size: 1rem;
+
+          @media @tablet-query {
+            font-size: 1.1rem;
+          }
+    
+          @media @mobile-query {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      margin: 2rem -0.5rem 4rem;
+
+      @media @mobile-query {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 0;
+        width: 100%;
+      }
+
+      &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4.2rem;
+        width: 16rem;
+        padding: 0;
+        margin: 0 0.5rem;
+        border: 2px solid @primary-color;
+        color: @primary-color;
+        background: @inverse-color;
+        text-align: center;
+        font-size: 1.4rem;
+
+        @media @mobile-query {
+          width: 100%;
+          font-size: 1.6rem;
+          margin: 0 0 1rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &.is-primary {
+          background: @primary-color;
+          color: @inverse-color;
+          border: none;
+        }
+      }
+    }
+  }
+}

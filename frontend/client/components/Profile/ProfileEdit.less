@@ -1,0 +1,81 @@
+@import '~styles/variables.less';
+
+.ProfileEdit {
+  position: relative;
+  z-index: 901;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  @media @mobile-query {
+    flex-direction: column;
+  }
+
+  &.is-editing {
+    align-items: flex-start;
+  }
+
+  &-info {
+    flex: 1;
+
+    .ant-form-item {
+      margin-bottom: 0.25rem;
+    }
+
+    .ant-btn {
+      margin-right: 0.5rem;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &-socialButton {
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &-text,
+    &-delete {
+      transition: transform 200ms ease, opacity 200ms ease;
+    }
+
+    &-delete {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%) translateY(-3rem);
+      opacity: 0;
+    }
+
+    &:hover {
+      &.is-delete {
+        background-color: @error-color;
+        border-color: @error-color;
+        color: @inverse-color;
+      }
+      
+      .ProfileEdit-socialButton {
+        &-text {
+          transform: translateY(3rem);
+          opacity: 0;
+        }
+
+        &-delete {
+          transform: translate(-50%, -50%);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-alert {
+    margin-top: 1rem;
+  }
+
+  .ant-alert {
+    margin-bottom: 0.75rem;
+  }
+}

@@ -1,0 +1,3 @@
+A worker has applied to the {{ args.rfw.title }} proposal. As an admin you can help out by reviewing the request.
+
+Review the worker here: {{ args.rfw_url }}

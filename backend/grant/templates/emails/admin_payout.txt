@@ -1,0 +1,3 @@
+{{ args.proposal.title }} has a milestone payout request. As an admin you can help out by reviewing the milestone.
+
+Review milestone: {{ args.proposal_url }}

@@ -1,0 +1,46 @@
+@import '~styles/variables.less';
+
+.SignUp {
+  &-container {
+    width: 100%;
+    max-width: 440px;
+  }
+
+  &-form {
+    &-item {
+      margin-bottom: 0.5rem;
+    }
+
+    &-controls {
+      margin-top: 0.5rem;
+    }
+
+    &-alert {
+      margin-top: 1rem;
+    }
+
+    &-legal {
+      display: block;
+      margin-bottom: 1rem;
+      font-family: @code-family;
+
+      a {
+        color: @text-color;
+        text-decoration: underline;
+      }
+
+      &-text {
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+      }
+
+      .ant-form-item-control {
+        line-height: inherit;
+      }
+    }
+
+    .PasswordFormItems .ant-row {
+      margin-bottom: 0.75rem;
+    }
+  }
+}

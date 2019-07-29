@@ -1,0 +1,19 @@
+{
+  "site": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+
+  "home": {
+    "title": "Home",
+    "description": "The Grants program is Tlon's system of awarding stars for useful outside contributions to the Urbit project",
+    "explanation": "The Grants program is Tlon's system of awarding stars for useful outside contributions to the Urbit project. Grants are paid out in the form of stars, in one of three ways:",
+    "explanationTitle1": "Proposals",
+    "explanationText1": "An individual or group can pitch a project that they'd like to work on.",
+    "explanationTitle2": "Bounties",
+    "explanationText2": "Tlon defines work that can be claimed and completed by developers for a predetermined number of stars.",
+    "explanationTitle3": "Gifts",
+    "explanationText3": "Tlon's informal way of rewarding contributions that don't fall into the above categories. There is no way to apply for a gift; we decide who to award such stars to semiannually. You can view the [gift history](/history) to see the kinds of contributions that we reward.",
+    "createButton": "Propose a Project",
+    "exploreButton": "Explore Bounties"
+  }
+}

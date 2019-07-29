@@ -1,0 +1,29 @@
+@import '~styles/variables.less';
+
+.Placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: @normal-color;
+  padding: 3rem;
+
+  &.is-loading {
+    border-color: fadeout(@primary-color, 60%);
+  }
+
+  &-title {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    & + div {
+      margin-top: 1rem;
+    }
+  }
+
+  &-subtitle {
+    font-size: 1rem;
+  }
+}

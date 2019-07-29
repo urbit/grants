@@ -1,0 +1,7 @@
+{{ args.body }}
+
+===============
+
+Urbit Grants
+
+Don't want any more emails? Unsubscribe here: {{ args.unsubscribe_url }}

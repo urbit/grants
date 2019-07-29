@@ -1,0 +1,25 @@
+@max-width: 440px;
+
+.AccountRecovery {
+  &-container {
+    width: 100%;
+    max-width: @max-width;
+
+    & button,
+    & input {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &-back {
+    margin-top: 2rem;
+    opacity: 0.7;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  &-error {
+    max-width: @max-width;
+    margin-top: 1rem;
+  }
+}

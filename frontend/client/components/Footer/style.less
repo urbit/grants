@@ -1,0 +1,47 @@
+@import '~styles/variables.less';
+
+.Footer {
+  padding: 0 @template-space-sides 3rem;
+
+  @media @tablet-query {
+    height: auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: @max-content-width;
+    margin: 0 auto;
+
+    @media @mobile-query {
+      flex-direction: column;
+    }
+  }
+
+  &-section {
+    flex: 1;
+    margin-bottom: 1rem;
+
+    &-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        text-decoration: underline;
+        font-family: @code-family;
+      }
+    }
+  }
+}

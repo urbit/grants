@@ -1,0 +1,64 @@
+@import '~styles/variables.less';
+
+.TeamForm {
+  max-width: 620px;
+  width: 100%;
+  margin: 0 auto;
+
+  &-pending,
+  &-add {
+    margin-top: 4rem;
+
+    &-title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  &-pending {
+    &-invite {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-family: @code-family;
+
+      &-delete {
+        width: 2rem;
+        height: 2rem;
+        background: @primary-color;
+        color: @inverse-color;
+        margin-right: 0.5rem;
+        font-size: 1rem;
+        transition: opacity 100ms ease, color 100ms ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &-add {
+    &-form {
+      display: flex;
+
+      &-field {
+        flex: 1;
+
+        .ant-form-explain {
+          margin-top: 0.3rem;
+          padding-left: 0.25rem;
+          font-size: 0.75rem;
+        }
+      }
+
+      &-submit {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import '~styles/variables.less';
+
+.Template {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &-content {
+    &.ant-layout-content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      padding: 0 @template-space-sides;
+      min-height: calc(100vh - @header-height);
+    }
+
+    .is-fullscreen & {
+      padding: 0;
+    }
+
+    &-inner {
+      width: 100%;
+      max-width: @max-content-width;
+      margin: 0 auto;
+      padding-top: @template-space-top;
+      padding-bottom: @template-space-bottom;
+      min-height: 280px;
+
+      .is-fullscreen & {
+        padding-top: 0;
+        padding-bottom: 0;
+        max-width: none;
+      }
+
+      .is-centered & {
+        align-self: center;
+      }
+
+      &-loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 280px;
+      }
+    }
+  }
+}

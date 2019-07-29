@@ -1,0 +1,186 @@
+@import 'variables.less';
+
+/// Button ///
+
+// Disable animations
+.ant-btn {
+  transition: none !important;
+}
+
+
+/// Input ///
+
+// remove shadow
+.ant-input:focus {
+  &,
+  .has-error &,
+  .has-success &,
+  .has-warning & {
+    box-shadow: none;
+  }
+}
+
+/// Select ///
+
+// No transitions on options
+.ant-select-dropdown-menu-item {
+  transition: none;
+}
+
+// Make options legible on hover
+.ant-select-dropdown-menu-item:hover,
+.ant-select-dropdown-menu-item-active,
+.ant-select-dropdown-menu-item-active:hover {
+  background: @primary-color;
+  color: @inverse-color;
+}
+
+// Underline selected item
+.ant-select-dropdown-menu-item-selected {
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+// remove shadow
+.ant-select-focused .ant-select-selection,
+.ant-select-selection:focus,
+.ant-select-selection:active {
+  &,
+  .has-error &,
+  .has-success &,
+  .has-warning & {
+    box-shadow: none;
+  }
+}
+
+// Remove transitions on hover
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title {
+  &, a {
+    transition: none;
+  }
+}
+
+// Make dropdown items legible when hovered
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover {
+  background: @primary-color;
+
+  a {
+    color: @inverse-color;
+  }
+}
+
+/// Checkbox ///
+
+// disable check animation
+.ant-checkbox-checked:after {
+  display: none;
+}
+
+/// Pagination ///
+.ant-pagination-item {
+  font-family: @code-family;
+}
+
+/// Popovers ///
+
+// Arrow border
+.ant-popover-placement-top > .ant-popover-content > .ant-popover-arrow {
+  box-shadow: 1px 1px 1px @border-color;
+}
+
+// Exclamation icon black
+.ant-popover-message > .anticon {
+  color: @primary-color;
+}
+
+/// Dropdown ///
+
+// Remove transitions on hover
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title {
+  &, a {
+    transition: none;
+  }
+}
+
+// Make dropdown items legible when hovered
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover {
+  background: @primary-color;
+
+  &, a {
+    color: @inverse-color;
+  }
+}
+
+
+/// Modal ///
+
+// No borders between content and header / footer
+.ant-modal-header,
+.ant-modal-footer {
+  border: none;
+}
+.ant-modal-header {
+  padding-bottom: 0;
+}
+.ant-modal-footer {
+  padding-top: 0;
+}
+
+// No shadow
+.ant-modal-content {
+  box-shadow: none;
+}
+
+
+/// Stepper ///
+
+// No transitions
+.ant-steps-item-icon {
+  transition: none;
+}
+
+/// Alert ///
+
+// Info alerts are black
+.ant-alert-info {
+  background: @primary-color;
+  border-color: @primary-color;
+  color: @inverse-color;
+
+  .ant-alert-message {
+    color: @inverse-color;
+  }
+
+  a {
+    color: #FFF;
+    text-decoration: underline;
+  }
+}
+
+/// Message ///
+
+// Change shadow to border
+.ant-message-notice-content {
+  box-shadow: none;
+  border: 1px solid @border-color;
+}
+
+
+/// Result ///
+
+.antd-pro-result-result {
+  text-align: left;
+  width: auto;
+
+  .antd-pro-result-icon {
+    display: none;
+  }
+
+  .antd-pro-result-description {
+    color: @text-color;
+  }
+}

@@ -1,0 +1,69 @@
+@import '~styles/variables.less';
+@import '~styles/markdown-styles-mixin.less';
+
+.MarkdownEditor {
+  .react-mde {
+    border-color: @border-color;
+    border-radius: 0;
+
+    .grip {
+      display: none;
+    }
+  }
+
+  .mde-header {
+    position: relative;
+    border-color: @border-color;
+    background: none;
+
+    .mde-header-group .mde-header-item {
+      opacity: 1;
+
+      button {
+        color: @primary-color;
+      }
+    }
+  }
+
+  .mde-tabs {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .mde-header-item button {
+      opacity: 1;
+      color: @primary-color;
+      text-decoration: underline;
+    }
+
+    .selected {
+      display: none;
+    }
+  }
+
+  .mde-preview .mde-preview-content {
+    font-size: 1.1rem;
+    .markdown-styles-mixin();
+  }
+
+  &.is-reduced {
+    .mde-preview .mde-preview-content {
+      font-size: 0.9rem;
+    }
+
+    .mde-header {
+      font-size: 0.8rem;
+      background: none;
+
+      .mde-header-item {
+        margin: 0 0.15rem;
+      }
+
+      ul.mde-header-group {
+        padding: 0.25rem 0.1rem;
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}
