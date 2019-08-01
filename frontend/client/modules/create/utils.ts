@@ -116,7 +116,7 @@ export function getCreateErrors(
         if (
           ms.dateEstimated <
           moment(Date.now())
-            .startOf('month')
+            .startOf('day')
             .unix()
         ) {
           return 'Estimate date should be in the future';

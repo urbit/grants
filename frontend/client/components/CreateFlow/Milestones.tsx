@@ -152,18 +152,18 @@ const MilestoneFields = ({
     <Row gutter={20}>
       <Col xs={24} sm={12} md={16}>
         <Form.Item label="Time estimate">
-          <DatePicker.MonthPicker
+          <DatePicker
             style={{ width: '100%' }}
             placeholder="Expected completion date"
             value={
               milestone.dateEstimated ? moment(milestone.dateEstimated * 1000) : undefined
             }
-            format="MMMM YYYY"
+            format='mm/dd/yyyy'
             allowClear={false}
             onChange={time =>
               onChange(index, {
                 ...milestone,
-                dateEstimated: time.startOf('month').unix(),
+                dateEstimated: time.endOf('day').unix(),
               })
             }
             disabled={milestone.immediatePayout}
@@ -172,15 +172,15 @@ const MilestoneFields = ({
                 return current
                   ? current <
                       moment()
-                        .subtract(1, 'month')
-                        .endOf('month')
+                        .subtract(1, 'day')
+                        .endOf('day')
                   : false;
               } else {
                 return current
                   ? current <
                       moment()
-                        .subtract(1, 'month')
-                        .endOf('month') || current < previousMilestoneDateEstimate
+                        .subtract(1, 'day')
+                        .endOf('day') || current < previousMilestoneDateEstimate
                   : false;
               }
             }}
