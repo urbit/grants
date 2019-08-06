@@ -8,7 +8,7 @@ import create, { CreateState, INITIAL_STATE as createInitialState } from 'module
 import auth, { AuthState, INITIAL_STATE as authInitialState } from 'modules/auth';
 import users, { UsersState, INITIAL_STATE as usersInitialState } from 'modules/users';
 import rfps, { RFPState, INITIAL_STATE as rfpsInitialState } from 'modules/rfps';
-import rfw, { RFWState, INITIAL_STATE as rfwInitialState } from 'modules/bounties';
+import rfw, { RFWState, INITIAL_STATE as rfwInitialState } from 'modules/rfws';
 import history from './history';
 
 export interface AppState {

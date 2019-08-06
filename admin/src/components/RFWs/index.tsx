@@ -25,7 +25,7 @@ class RFWs extends React.Component<{}> {
         handleResetQuery={store.resetRFWPageQuery}
         controlsExtra={
           <>
-            <Link to="/bounties/new">
+            <Link to="/rfws/new">
               <Button icon="plus">New Bounty</Button>
             </Link>
           </>

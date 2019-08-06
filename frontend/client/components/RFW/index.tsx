@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import Loader from 'components/Loader';
-import { rfwActions } from 'modules/bounties';
+import { rfwActions } from 'modules/rfws';
 import { bindActionCreators, Dispatch } from 'redux';
 import { AppState } from 'store/reducers';
 import ExceptionPage from 'components/ExceptionPage';
@@ -149,7 +149,7 @@ export class RFWDetail extends React.Component<Props, State> {
                 {rfw.tags.map((t, idx) => (
                   <React.Fragment key={t.id}>
                     {idx > 0 && ", "}
-                    <Link to={`/bounties?tags=${t.id}`}>
+                    <Link to={`/rfws?tags=${t.id}`}>
                       <strong>{t.text}</strong>
                     </Link>
                   </React.Fragment>

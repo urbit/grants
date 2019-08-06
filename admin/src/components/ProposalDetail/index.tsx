@@ -15,7 +15,7 @@ import {
 } from 'antd';
 import TextArea from 'antd/lib/input/TextArea';
 import store from 'src/store';
-import { formatDateSeconds, formatMonthDateSeconds } from 'util/time';
+import { formatDateSeconds, formatDateDay } from 'util/time';
 import { PROPOSAL_STATUS, MILESTONE_STAGE, PROPOSAL_STAGE } from 'src/types';
 import { Link } from 'react-router-dom';
 import Back from 'components/Back';
@@ -333,7 +333,7 @@ class ProposalDetailNaked extends React.Component<Props, State> {
                   >
                     <p>
                       <b>Estimated Date:</b>{' '}
-                      {formatMonthDateSeconds(milestone.dateEstimated)}{' '}
+                      {formatDateDay(milestone.dateEstimated)}{' '}
                     </p>
                     <p>{milestone.content}</p>
                   </Card>

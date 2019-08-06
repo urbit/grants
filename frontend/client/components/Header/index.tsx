@@ -45,7 +45,7 @@ export default class Header extends React.Component<Props, State> {
             <Link to="/proposals" className="Header-links-link">
               Proposals
             </Link>
-            <Link to="/bounties" className="Header-links-link">
+            <Link to="/rfws" className="Header-links-link">
               Bounties
             </Link>
             <Link to="/history" className="Header-links-link">

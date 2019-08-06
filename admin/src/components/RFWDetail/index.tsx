@@ -170,7 +170,7 @@ class RFWDetail extends React.Component<Props> {
 
     return (
       <div className="RFWDetail">
-        <Back to="/bounties" text="Bounties" />
+        <Back to="/rfws" text="Bounties" />
         <h1>{rfw.title}</h1>
         <Row gutter={16}>
           {/* MAIN */}
@@ -215,7 +215,7 @@ class RFWDetail extends React.Component<Props> {
           <Col span={6}>
             {/* ACTIONS */}
             <Card className="RFWDetail-actions" size="small">
-              <Link to={`/bounties/${rfw.id}/edit`}>
+              <Link to={`/rfws/${rfw.id}/edit`}>
                 <Button type="primary" icon="edit" block>
                   Edit
                 </Button>

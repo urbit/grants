@@ -1,7 +1,7 @@
 import React from 'react';
 import { debounce } from 'lodash';
 import { connect } from 'react-redux';
-import { rfwActions } from 'modules/bounties';
+import { rfwActions } from 'modules/rfws';
 import { bindActionCreators, Dispatch } from 'redux';
 import { AppState } from 'store/reducers';
 import { Input, Drawer, Icon, Button } from 'antd';

@@ -35,7 +35,7 @@ class Home extends React.Component<WithNamespaces> {
               <Link className="Home-hero-buttons-button is-primary" to="/create">
                 {t('home.createButton')}
               </Link>
-              <Link className="Home-hero-buttons-button" to="/bounties">
+              <Link className="Home-hero-buttons-button" to="/rfws">
                 {t('home.exploreButton')}
               </Link>
             </div>

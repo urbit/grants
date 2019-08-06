@@ -52,7 +52,7 @@ class Template extends React.Component<Props> {
               </Link>
             </Menu.Item>
             <Menu.Item key="rfws">
-              <Link to="/bounties">
+              <Link to="/rfws">
                 <Icon type="sound" />
                 <span className="nav-text">Bounties</span>
               </Link>

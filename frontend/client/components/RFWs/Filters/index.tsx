@@ -16,7 +16,7 @@ import {
 import { typedKeys } from 'utils/ts';
 import { RFWPage } from 'types';
 import { AppState } from 'store/reducers';
-import { fetchTags } from 'modules/bounties/actions';
+import { fetchTags } from 'modules/rfws/actions';
 import './style.less';
 
 interface StateProps {
@@ -43,7 +43,7 @@ class RFWFilters extends React.Component<Props> {
     if (!tags.length) {
       this.props.fetchTags();
     }
-
+    
     const args = qs.parse(location.search);
     if (args.tags) {
       this.props.handleChangeFilters({

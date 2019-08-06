@@ -195,27 +195,27 @@ async function deleteRFP(id: number) {
 }
 
 async function fetchRFWs(params: Partial<PageQuery>) {
-  const { data } = await api.get('/admin/bounties', { params });
+  const { data } = await api.get('/admin/rfws', { params });
   return data;
 }
 
 async function fetchRFWDetail(id: number) {
-  const { data } = await api.get(`/admin/bounties/${id}`);
+  const { data } = await api.get(`/admin/rfws/${id}`);
   return data;
 }
 
 async function createRFW(args: Partial<RFW>) {
-  const { data } = await api.post('/admin/bounties', args);
+  const { data } = await api.post('/admin/rfws', args);
   return data;
 }
 
 async function editRFW(id: number, args: Partial<RFW>) {
-  const { data } = await api.put(`/admin/bounties/${id}`, args);
+  const { data } = await api.put(`/admin/rfws/${id}`, args);
   return data;
 }
 
 async function deleteRFW(id: number) {
-  await api.delete(`/admin/bounties/${id}`);
+  await api.delete(`/admin/rfws/${id}`);
 }
 
 async function approveRFWWorker(
@@ -224,7 +224,7 @@ async function approveRFWWorker(
   isAccept: boolean,
   message: string,
 ) {
-  const { data } = await api.put(`/admin/bounties/${id}/worker/${workerId}/accept`, {
+  const { data } = await api.put(`/admin/rfws/${id}/worker/${workerId}/accept`, {
     isAccept,
     message,
   });
@@ -239,7 +239,7 @@ async function acceptRFWClaim(
   message: string,
 ) {
   const { data } = await api.put(
-    `/admin/bounties/${id}/milestone/${msId}/accept/${claimId}`,
+    `/admin/rfws/${id}/milestone/${msId}/accept/${claimId}`,
     {
       isAccept,
       message,
@@ -986,7 +986,7 @@ const app = store({
     }
     app.historyEventDeleting = false;
   },
-
+  
   // Admin Logs
 
   async fetchLogs() {

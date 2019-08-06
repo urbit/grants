@@ -310,7 +310,7 @@ class TestRfwApi(BaseUserConfig):
             x['claims'][1]['milestone']['isAuthedActive'] = False
 
     def test_admin_rfw_api_get_list(self):
-        url = '/api/v1/admin/bounties'
+        url = '/api/v1/admin/rfws'
         self.check_auth(lambda: self.app.get(url))
 
         # admin
@@ -324,7 +324,7 @@ class TestRfwApi(BaseUserConfig):
         self.assertEqual(self.rfw0_json, r.json['items'][0])
 
     def test_admin_rfw_api_get_single(self):
-        url = f'/api/v1/admin/bounties/{self.rfw0.id}'
+        url = f'/api/v1/admin/rfws/{self.rfw0.id}'
         self.check_auth(lambda: self.app.get(url))
 
         # admin
@@ -339,7 +339,7 @@ class TestRfwApi(BaseUserConfig):
         self.assert404(r)
 
     def test_admin_rfw_api_create(self):
-        url = f'/api/v1/admin/bounties'
+        url = f'/api/v1/admin/rfws'
         data = {
             'title': 'new rfw',
             'brief': 'new rfw brief',
@@ -369,7 +369,7 @@ class TestRfwApi(BaseUserConfig):
         self.assertEqual(r.json['milestones'][0]['bounty'], 9)
 
     def test_admin_rfw_api_update(self):
-        url = f'/api/v1/admin/bounties/{self.rfw0.id}'
+        url = f'/api/v1/admin/rfws/{self.rfw0.id}'
         data = {
             'title': 'Muh new title',
             'brief': 'different brief',
@@ -402,7 +402,7 @@ class TestRfwApi(BaseUserConfig):
                 self.assertEqual(r.json['milestones'][i]['index'], i)
 
     def test_admin_rfw_api_delete(self):
-        url = f'/api/v1/admin/bounties/{self.rfw0.id}'
+        url = f'/api/v1/admin/rfws/{self.rfw0.id}'
 
         def req():
             return self.app.delete(url)
@@ -432,7 +432,7 @@ class TestRfwApi(BaseUserConfig):
         }
 
         def _req(a, b):
-            url = f'/api/v1/admin/bounties/{a}/worker/{b}/accept'
+            url = f'/api/v1/admin/rfws/{a}/worker/{b}/accept'
             return lambda: self.app.put(
                 url,
                 data=json.dumps(data),
@@ -491,7 +491,7 @@ class TestRfwApi(BaseUserConfig):
         # raise Exception('fail')
 
         def _req(a, b, c):
-            url = f'/api/v1/admin/bounties/{a}/milestone/{b}/accept/{c}'
+            url = f'/api/v1/admin/rfws/{a}/milestone/{b}/accept/{c}'
             return lambda: self.app.put(
                 url,
                 data=json.dumps(data),
@@ -529,4 +529,4 @@ class TestRfwApi(BaseUserConfig):
 
     def test_rfw_api_get(self):
         # unauthenticated
-        r = self.app.get('/api/v1/bounties')
+        r = self.app.get('/api/v1/rfws')
