@@ -575,7 +575,7 @@ def edit_comment(comment_id, hidden, reported):
 # RFWs (Requests for Work)
 
 
-@blueprint.route('/rfws', methods=['GET'])
+@blueprint.route('/bounties', methods=['GET'])
 @query(paginated_fields)
 @admin.admin_auth_required
 def get_rfws(**kwargs):
@@ -587,7 +587,7 @@ def get_rfws(**kwargs):
     return result
 
 
-@blueprint.route('/rfws', methods=['POST'])
+@blueprint.route('/bounties', methods=['POST'])
 @body({
     "title": fields.Str(required=True),
     "brief": fields.Str(required=True),
@@ -605,7 +605,7 @@ def create_rfw(**kwargs):
     return rfw_models.rfw_schemas.single_admin.dump(rfw), 200
 
 
-@blueprint.route('/rfws/<rfw_id>', methods=['GET'])
+@blueprint.route('/bounties/<rfw_id>', methods=['GET'])
 @admin.admin_auth_required
 def get_rfw(rfw_id):
     rfw = rfw_models.RFW.query.get(rfw_id)
@@ -614,7 +614,7 @@ def get_rfw(rfw_id):
     return rfw_models.rfw_schemas.single_admin.dump(rfw)
 
 
-@blueprint.route('/rfws/<rfw_id>', methods=['PUT'])
+@blueprint.route('/bounties/<rfw_id>', methods=['PUT'])
 @body({
     "title": fields.Str(required=False),
     "brief": fields.Str(required=False),
@@ -636,7 +636,7 @@ def update_rfw(rfw_id, **kwargs):
     return rfw_models.rfw_schemas.single_admin.dump(rfw)
 
 
-@blueprint.route('/rfws/<rfw_id>', methods=['DELETE'])
+@blueprint.route('/bounties/<rfw_id>', methods=['DELETE'])
 @admin.admin_auth_required
 def delete_rfw(rfw_id):
     rfw = rfw_models.RFW.query.get(rfw_id)
@@ -648,7 +648,7 @@ def delete_rfw(rfw_id):
     return {"message": "ok"}, 200
 
 
-@blueprint.route('/rfws/<rfw_id>/worker/<worker_id>/accept', methods=['PUT'])
+@blueprint.route('/bounties/<rfw_id>/worker/<worker_id>/accept', methods=['PUT'])
 @body({
     "isAccept": fields.Bool(required=True),
     "message": fields.Str(required=False),
@@ -671,13 +671,13 @@ def update_rfw_worker_accept(rfw_id, worker_id, is_accept, message=''):
     send_email(w.user.email_address, 'worker_approved' if is_accept else 'worker_rejected', {
         'rfw': rfw,
         'message': message,
-        'rfw_url': make_url(f'/rfws/{rfw.id}'),
+        'rfw_url': make_url(f'/bounties/{rfw.id}'),
     })
     db.session.commit()
     return rfw_models.rfw_schemas.single_admin.dump(rfw)
 
 
-@blueprint.route('/rfws/<rfw_id>/milestone/<ms_id>/accept/<claim_id>', methods=['PUT'])
+@blueprint.route('/bounties/<rfw_id>/milestone/<ms_id>/accept/<claim_id>', methods=['PUT'])
 @body({
     "isAccept": fields.Bool(required=True),
     "message": fields.Str(required=False),
@@ -700,7 +700,7 @@ def update_rfw_milestone_claim_accept(rfw_id, ms_id, claim_id, is_accept, messag
         'rfw': rfw,
         'milestone': ms,
         'message': message,
-        'rfw_url': make_url(f'/rfws/{rfw.id}'),
+        'rfw_url': make_url(f'/bounties/{rfw.id}'),
     })
     db.session.commit()
     return rfw_models.rfw_schemas.single_admin.dump(rfw)

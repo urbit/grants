@@ -342,14 +342,14 @@ export function getRFWs(page?: RFWPageParams): Promise<{ data: RFWPage }> {
   if (page) {
     serverParams = formatRFWPageParamsForGet(page);
   }
-  return axios.get('/api/v1/rfws/', { params: serverParams || {} }).then(res => {
+  return axios.get('/api/v1/bounties/', { params: serverParams || {} }).then(res => {
     res.data = formatRFWPageFromGet(res.data);
     return res;
   });
 }
 
 export function getRFW(id: number | string): Promise<{ data: RFW }> {
-  return axios.get(`/api/v1/rfws/${id}`).then(res => {
+  return axios.get(`/api/v1/bounties/${id}`).then(res => {
     res.data = formatRFWFromGet(res.data);
     return res;
   });
@@ -360,7 +360,7 @@ export function rfwWorkerRequest(payload: {
   statusMessage: string;
 }): Promise<{ data: any }> {
   const { rfwId, ...args } = payload;
-  return axios.post(`/api/v1/rfws/${rfwId}/worker/request`, args);
+  return axios.post(`/api/v1/bounties/${rfwId}/worker/request`, args);
 }
 
 export function rfwMilestoneClaim(payload: {
@@ -371,10 +371,9 @@ export function rfwMilestoneClaim(payload: {
   url: string;
 }): Promise<{ data: any }> {
   const { rfwId, msId, workerId, ...args } = payload;
-  return axios.post(`/api/v1/rfws/${rfwId}/milestone/${msId}/worker/${workerId}`, args);
+  return axios.post(`/api/v1/bounties/${rfwId}/milestone/${msId}/worker/${workerId}`, args);
 }
 
 export function getRFWTags(): Promise<{ data: Tag[] }> {
-  return axios.get(`/api/v1/rfws/tags`);
+  return axios.get(`/api/v1/bounties/tags`);
 }
-

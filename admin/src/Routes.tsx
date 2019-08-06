@@ -46,10 +46,10 @@ class Routes extends React.Component<Props> {
             <Route path="/users" component={Users} />
             <Route path="/proposals/:id" component={ProposalDetail} />
             <Route path="/proposals" component={Proposals} />
-            <Route path="/rfws/new" component={RFWForm} />
-            <Route path="/rfws/:id/edit" component={RFWForm} />
-            <Route path="/rfws/:id" component={RFWDetail} />
-            <Route path="/rfws" component={RFWs} />
+            <Route path="/bounties/new" component={RFWForm} />
+            <Route path="/bounties/:id/edit" component={RFWForm} />
+            <Route path="/bounties/:id" component={RFWDetail} />
+            <Route path="/bounties" component={RFWs} />
             <Route path="/history/new" component={HistoryForm} />
             <Route path="/history/:id/edit" component={HistoryForm} />
             <Route path="/history" component={HistoryEvents} />

@@ -87,7 +87,7 @@ class RFWForm extends React.Component<Props, State> {
 
     return (
       <Form className="RFWForm" layout="vertical" onSubmit={this.handleSubmit}>
-        <Back to="/rfws" text="Bounties" />
+        <Back to="/bounties" text="Bounties" />
         <Form.Item label="Title">
           {getFieldDecorator('title', {
             initialValue: defaults.title,
@@ -222,7 +222,7 @@ class RFWForm extends React.Component<Props, State> {
           >
             Submit
           </Button>
-          <Link to="/rfws">
+          <Link to="/bounties">
             <Button type="ghost" size="large" disabled={store.rfwDetailBusy}>
               Cancel
             </Button>
@@ -346,7 +346,7 @@ class RFWForm extends React.Component<Props, State> {
 
       if (store.rfwDetailSaved) {
         message.success(msg, 3);
-        this.props.history.replace('/rfws');
+        this.props.history.replace('/bounties');
       }
     });
   };

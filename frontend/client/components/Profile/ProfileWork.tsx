@@ -71,7 +71,7 @@ class ProfileWork extends React.Component<Props> {
           <div className="ProfileWork">
             <div className="ProfileWork-private">
               Started working on{' '}
-              <Link to={`/rfws/${rfw.id}`} className="ProfileWork-private-title">
+              <Link to={`/bounties/${rfw.id}`} className="ProfileWork-private-title">
                 {rfw.title}
               </Link>{' '}
               {moment(statusChangeDate * 1000).from(Date.now())}
@@ -82,7 +82,7 @@ class ProfileWork extends React.Component<Props> {
               <div className="ProfileWork-private">
                 Had a claim accepted for{' '}
                 <Link
-                  to={`/rfws/${rfw.id}/milestone/${c.milestone!.id}`}
+                  to={`/bounties/${rfw.id}/milestone/${c.milestone!.id}`}
                   className="ProfileWork-private-title"
                 >
                   {rfw.title} / {c.milestone!.title}
@@ -100,14 +100,14 @@ class ProfileWork extends React.Component<Props> {
       <>
         <div className="ProfileWork">
           <div className="ProfileWork-block">
-            <Link to={`/rfws/${rfw.id}`} className="ProfileWork-title">
+            <Link to={`/bounties/${rfw.id}`} className="ProfileWork-title">
               {rfw.title} <Tag color={st[status].color}>{st[status].tag}</Tag>{' '}
             </Link>
             <div className={`ProfileWork-status`}>{st[status].blurb}</div>
           </div>
           <div className="ProfileWork-block is-actions">
             {RFW_WORKER_STATUS.ACCEPTED === status && (
-              <Link to={`/rfws/${rfw.id}`}>
+              <Link to={`/bounties/${rfw.id}`}>
                 <Button>View</Button>
               </Link>
             )}
@@ -217,7 +217,7 @@ class ProfileWorkClaim extends React.Component<
     } as {
       [key in RFW_MILESTONE_CLAIM_STAGE]: { color: string; tag: string; blurb: ReactNode }
     };
-    const url = `/rfws/${rfw.id}/milestone/${milestone.id}`;
+    const url = `/bounties/${rfw.id}/milestone/${milestone.id}`;
     return (
       <div className="ProfileWork">
         <div className="ProfileWork-block">

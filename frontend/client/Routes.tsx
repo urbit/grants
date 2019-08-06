@@ -134,7 +134,7 @@ const routeConfigs: RouteConfig[] = [
   {
     // Browse rfws
     route: {
-      path: '/rfws',
+      path: '/bounties',
       component: RFWs,
       exact: true,
     },
@@ -145,7 +145,7 @@ const routeConfigs: RouteConfig[] = [
   {
     // RFW detail page
     route: {
-      path: '/rfws/:id',
+      path: '/bounties/:id',
       component: RFW,
     },
     template: {

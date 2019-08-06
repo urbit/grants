@@ -3,7 +3,7 @@ import { fetchUser } from 'modules/users/actions';
 import { fetchProposals, fetchProposal } from 'modules/proposals/actions';
 import { fetchRfps, fetchRfp } from 'modules/rfps/actions';
 import { extractIdFromSlug } from 'utils/api';
-import { fetchRFW, fetchTags, fetchRFWs } from 'modules/rfws/actions';
+import { fetchRFW, fetchTags, fetchRFWs } from 'modules/bounties/actions';
 
 const pathActions = [
   {
@@ -48,7 +48,7 @@ const pathActions = [
     },
   },
   {
-    matcher: /^\/rfws$/,
+    matcher: /^\/bounties$/,
     action: (_: RegExpMatchArray, store: Store) => {
       return store.dispatch<any>(async (dispatch: Dispatch<any>) => {
         await dispatch(fetchRFWs());
@@ -57,7 +57,7 @@ const pathActions = [
     },
   },
   {
-    matcher: /^\/rfws\/(.+)$/,
+    matcher: /^\/bounties\/(.+)$/,
     action: (match: RegExpMatchArray, store: Store) => {
       const rfwId = extractIdFromSlug(match[1]);
       if (rfwId) {

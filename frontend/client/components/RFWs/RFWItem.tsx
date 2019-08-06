@@ -34,7 +34,7 @@ export default class RFPItem extends React.Component<Props> {
     ];
 
     return (
-      <ResultItem to={`/rfws/${urlId}`} title={title} content={brief} infos={infos} />
+      <ResultItem to={`/bounties/${urlId}`} title={title} content={brief} infos={infos} />
     );
   }
 }

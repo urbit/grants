@@ -41,14 +41,14 @@ class Home extends React.Component {
         <div>
           <Icon type="exclamation-circle" /> There are <b>{rfwWorkerRequestCount}</b> bounties{' '}
           <b>awaiting worker review</b>.{' '}
-          <Link to="/rfws?filters[]=WORKERS">Click here</Link> to view them.
+          <Link to="/bounties?filters[]=WORKERS">Click here</Link> to view them.
         </div>
       ),
       !!rfwMilestoneClaimCount && (
         <div>
           <Icon type="exclamation-circle" /> There are <b>{rfwMilestoneClaimCount}</b>{' '}
           bounties <b>awaiting milestone claim review</b>.{' '}
-          <Link to="/rfws?filters[]=CLAIMS">Click here</Link> to view them.
+          <Link to="/bounties?filters[]=CLAIMS">Click here</Link> to view them.
         </div>
       ),
     ].filter(Boolean);

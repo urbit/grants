@@ -18,7 +18,7 @@ RFW = rfw_models.RFW
 rfw_schemas = rfw_models.rfw_schemas
 
 
-blueprint = Blueprint("rfw", __name__, url_prefix="/api/v1/rfws")
+blueprint = Blueprint("rfw", __name__, url_prefix="/api/v1/bounties")
 
 
 def rfw_exists_check(id):
@@ -60,7 +60,7 @@ def post_rfw_worker_request(id, **kwargs):
     # notify admin
     send_admin_email('admin_worker_request', {
         'rfw': rfw,
-        'rfw_url': make_admin_url(f'/rfws/{rfw.id}'),
+        'rfw_url': make_admin_url(f'/bounties/{rfw.id}'),
     })
     return rfw_schemas.single.dump(rfw)
 
@@ -79,7 +79,7 @@ def post_rfw_milestone_worker_claim(id, ms_id, worker_id, message, url):
     send_admin_email('admin_work_milestone_claim', {
         'rfw': rfw,
         'milestone': rfw.get_milestone_by_id(ms_id),
-        'rfw_url': make_admin_url(f'/rfws/{rfw.id}'),
+        'rfw_url': make_admin_url(f'/bounties/{rfw.id}'),
     })
     return rfw_schemas.single.dump(rfw)
 

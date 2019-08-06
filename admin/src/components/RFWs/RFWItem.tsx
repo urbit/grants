@@ -29,7 +29,7 @@ class RFWItemNaked extends React.Component<RFW, State> {
     );
 
     const actions = [
-      <Link key="edit" to={`/rfws/${rfw.id}/edit`}>
+      <Link key="edit" to={`/bounties/${rfw.id}/edit`}>
         edit
       </Link>,
       <Popconfirm
@@ -47,7 +47,7 @@ class RFWItemNaked extends React.Component<RFW, State> {
     return (
       <Spin key={rfw.id} spinning={this.state.isDeleting}>
         <List.Item className="RFWItem" actions={actions}>
-          <Link to={`/rfws/${rfw.id}`}>
+          <Link to={`/bounties/${rfw.id}`}>
             <h2>
               {rfw.title || '(no title)'}
               <Tooltip title={status.hint}>

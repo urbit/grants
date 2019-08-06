@@ -158,7 +158,7 @@ const MilestoneFields = ({
             value={
               milestone.dateEstimated ? moment(milestone.dateEstimated * 1000) : undefined
             }
-            format='mm/dd/yyyy'
+            format='M-D-YY'
             allowClear={false}
             onChange={time =>
               onChange(index, {
