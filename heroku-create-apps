@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BUILDPACK="https://github.com/AMStrix/heroku-buildpack-mono-apps"
+BUILDPACK="https://github.com/heroku/heroku-buildpack-multi-procfile"
 
 BASE_NAME=${1:-}
 
@@ -63,7 +63,7 @@ echo "  eip712:             $BASE_NAME-eip712"
 echo ""
 
 read -p "Is this correct? (y/n): " -n 1 -r
-echo 
+echo
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 
@@ -79,7 +79,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "  git push $BASE_NAME-eip712 HEAD:master"
   echo
 
-else 
+else
 
   echo "Canceled create app $BASE_NAME, goodbye now."
   echo
