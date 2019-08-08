@@ -18,7 +18,7 @@ const Footer: React.SFC<WithNamespaces> = () => (
           <a href="https://urbit.org/faq/">FAQ</a>
           <a href="https://urbit.org/privacy/">Privacy Policy</a>
           <a href="https://urbit.org/tos/">Terms of Service</a>
-          <a href="https://urbit.org/bounty/">Bug Bounty + Security</a>
+          <a href="https://urbit.org/bounties/">Bug Bounty + Security</a>
         </div>
       </div>
       <div className="Footer-section">
