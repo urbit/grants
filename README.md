@@ -2,6 +2,10 @@
 
 This is a collection of the various services and components that make up the Urbit Grants.
 
+### Heroku Deployment
+
+This branch is currently connected to Heroku's staged versions of [grants.urbit.org](https://grants.urbit.org/).  This means that any changes pushed to this branch will automatically deploy to the stage-admin, stage-frontend and stage-backend Heroku apps, hosted [here](https://tlon-grant-stage-frontend.herokuapp.com/).  
+
 ### Setup
 
 Instructions for each respective component can be found in:
