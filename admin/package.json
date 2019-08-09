@@ -11,6 +11,9 @@
     "heroku-postbuild": "yarn build",
     "tsc": "tsc"
   },
+  "engines": {
+    "yarn": "1.12.3"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && yarn run tsc",
