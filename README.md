@@ -1,6 +1,12 @@
 # Urbit Grants
 
+[→ Prod site](http://grants.urbit.org)
+
 This is a collection of the various services and components that make up the Urbit Grants.
+
+The website consists of a collection of four Heroku apps.  Currently, we directly deploy our code to Heroku (not through GitHub).  
+
+For development, see the [stage branch README](https://github.com/urbit/grants/blob/stage/README.md) for important information about the current dev setup.  
 
 ### Setup
 
