@@ -1,6 +1,19 @@
 # Urbit Grants
 
+[→ Prod site](http://grants.urbit.org)
+[→ Prod admin](http://grants-admin.urbit.org)
+[→ Stage frontend](https://tlon-grant-stage-frontend.herokuapp.com)
+[→ Stage admin](https://tlon-grant-stage-admin.herokuapp.com)
+
 This is a collection of the various services and components that make up the Urbit Grants.
+
+### Development/Deployment Process
+
+**DO NOT DIRECTLY MERGE/DEPLOY THIS BRANCH TO MASTER/PROD** 
+
+The /backend directory of this branch removes all admin portal authentication services.  This grants the developer the ability to view changes to the admin portal.  
+
+If you'd like to push changes to master or Heroku's prod apps, you must **remove all changes** made to [backend/grant/admin/utils/admin.py](backend/grant/utils/admin.py).  
 
 ### Heroku Deployment
 
