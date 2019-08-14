@@ -28,7 +28,6 @@ class BasicHead extends React.Component<Props> {
             integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
             crossOrigin="anonymous"
           />
-
           {/* open graph protocol defaults, can be overridden in children <HeaderDetails ...> */}
           <meta property="og:site_name" content="Urbit Grants" />
           <meta property="og:title" content={`Urbit Grants - ${title}`} />

@@ -80,11 +80,11 @@ class SignUp extends React.Component<Props> {
                 <Checkbox name="hasAgreed">
                   <span className="SignUp-form-legal-text">
                     I agree to the{' '}
-                    <Link target="_blank" to="/tos">
+                    <Link target="_blank" to="https://urbit.org/tos/">
                       terms of service
                     </Link>
                     , and{' '}
-                    <Link target="_blank" to="/privacy">
+                    <Link target="_blank" to="https://urbit.org/privacy/">
                       privacy policy
                     </Link>
                     .

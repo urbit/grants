@@ -13,8 +13,8 @@
     "tsc": "tsc"
   },
   "engines": {
-    "node": "8.13.0",
-    "yarn": "1.12.3"
+    "node": "10.16.2",
+    "yarn": "1.17.3"
   },
   "husky": {
     "hooks": {
