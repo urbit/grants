@@ -54,6 +54,7 @@ heroku git:remote -a myappbasename-eip712 -r myappbasename-eip712
 Add addons to the following dynos:
 * Backend
   * Postgres (Standard 0 if you want backups)
+    heroku addons:create heroku-postgresql:hobby-dev --app=<APP_NAME>
 * Backend, Frontend, EIP-712
   * Timber (Optional logging)
   

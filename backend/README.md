@@ -21,17 +21,17 @@ and if you’re running Python 3.6+ on macOS, you'll need to
 
 ## Database Setup
 
+Urbit Grants expects that you have Postgres installed.
+If you don't have Postgres installed, you can install it using [PostgresApp](https://postgresapp.com/) on Mac.
+
+By default, `.env.example` expects a database `tlon` to have been created with no user or passwords set.
+Using `psql`, a database can be created with this configuration simple by executing `CREATE DATABASE tlon;` in your terminal.
+
 Once you have installed your DBMS, run the following to create your app's
 database tables and perform the initial migration
 
-    flask db migrate
+    flask db migrate # only needed if database changes are made.
     flask db upgrade
-
-## Generate Admin Authentication
-
-To generate a new admin password, run
-
-    flask flask gen-admin-auth
 
 ## Running the App
 
