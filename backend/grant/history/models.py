@@ -95,7 +95,7 @@ def make_markdown(event, field):
             "$proposal",
             "[{}]({})".format(
                 event.proposal.title,
-                make_url("/proposal/{}".format(event.proposal.id))
+                make_url("/proposals/{}".format(event.proposal.id))
             )
         )
     return text
